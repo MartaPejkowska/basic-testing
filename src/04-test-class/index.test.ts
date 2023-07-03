@@ -45,10 +45,12 @@ describe('BankAccount', () => {
     const secondBankAccount = getBankAccount(someAmount);
     bankAccount.transfer(someAmount, secondBankAccount);
     expect(secondBankAccount.getBalance()).toBe(someAmount + someAmount);
+    expect(bankAccount.getBalance()).toBe(initialBalance - someAmount);
   });
 
   test('fetchBalance should return number in case if request did not failed', async () => {
     // Write your tests here
+
 
   });
 
